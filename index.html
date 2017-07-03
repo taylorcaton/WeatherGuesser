@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geocoding service</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="floating-panel">
+      <!-- <input id="address" type="textbox" value="UNC Center City, NC"> -->
+      <input id="nextCity" type="button" value="Next Location">
+    </div>
+    <div id="map"></div>
+
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="assets/js/logic.js"></script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh20X2Apvtd3thGAM_AIaJMs-rB_6cvms&callback=initMap">
+    </script>
+  </body>
+</html>
