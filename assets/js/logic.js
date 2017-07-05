@@ -45,12 +45,34 @@ function updatePage(){
   $("#locName").html("Welcome to " + getLoc());
 }
 
+function checkAnswer(low, high){
+  if(temp >= low && temp < high){
+    console.log("correct!");
+  }else{
+    console.log("wrong!");
+  }
+}
+
 $(document).on("click", "#nextCity", function(){
 
   nextLoc();
   geocodeAddress(geocoder, map);
   getWeather(getLoc());
   updatePage();
+
+});
+
+$(document).on("click", ".guess", function(){
+
+  var guessHigh = $(this).attr("data-deg-high");
+  var guessLow = $(this).attr("data-deg-low");
+  console.log(guessHigh + " " + guessLow);
+
+  checkAnswer(guessLow, guessHigh);
+
+  if((currentLoc + 1) == locList.length){
+    console.log("end game here");
+  }
 
 });
 
