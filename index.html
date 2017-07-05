@@ -1,26 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
   <head>
-    <title>Geocoding service</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Guess the Temperature!</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Bootswatch -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <div id="floating-panel">
-      <!-- <input id="address" type="textbox" value="UNC Center City, NC"> -->
-      <input id="nextCity" type="button" value="Next Location">
-    </div>
-    <div id="map"></div>
 
-    <!-- JQUERY -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
+    <div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Guess the temperature </h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li>
+          <button type="button" data-deg-low="90" data-deg-high="200" class="btn btn-block btn-lg btn-danger">&gt;90&deg F</button>
+        </li>
+        <li>
+          <button type="button" data-deg-low="80" data-deg-high="90" class="btn btn-block btn-lg btn-warning">80-90&deg F</button>
+        </li>
+        <li>
+          <button type="button" data-deg-low="70" data-deg-high="80" class="btn btn-block btn-lg btn-success">70-80&deg F</button>
+        </li>
+        <li>
+          <button type="button" data-deg-low="60" data-deg-high="70" class="btn btn-block btn-lg btn-primary">60-70&deg F</button>
+        </li>
+        <li>
+          <button type="button" data-deg-low="-100" data-deg-high="60" class="btn btn-block btn-lg btn-default">&lt;60&deg F</button
+        ></li>
+      </ul><br>
+      <div class="input-group">
+        <input class="btn" id="nextCity" type="button" value="Next Location">
+      </div>
+      <div id="weatherDetails">
+        <div class="icon"></div>
+        <div class="description"></div>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>Weather provided by: Open Weather</small></h4>
+      <hr>
+      <h2 id="locName">Press "Next Location" to get started</h2>
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+
+    <!-- <div class="container">
+      <div class="row" >
+        
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="map">
+          
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <input id="nextCity" type="button" value="Next Location">
+        </div>
+
+      </div>
+    </div> -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Weather API -->
+    <script src="assets/js/weatherAPI.js"></script>
+    
+    <!-- MY JS -->
     <script src="assets/js/logic.js"></script>
     
+    <!-- Google API -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh20X2Apvtd3thGAM_AIaJMs-rB_6cvms&callback=initMap">
     </script>
+
+
+
   </body>
 </html>
