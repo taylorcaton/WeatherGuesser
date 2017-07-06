@@ -1,4 +1,4 @@
-var locList = ["", "UNC Charlotte Center City Campus, NC", "Death Valley, CA", "Kathmandu, Nepal"]
+var locList = ["", "UNC Charlotte Center City Campus, NC", "Death Valley, CA", "Kathmandu, Nepal", "Disney World, FL", ]
 var currentLoc = 0;
 var geocoder;
 var map;
@@ -48,8 +48,18 @@ function updatePage(){
 function checkAnswer(low, high){
   if(temp >= low && temp < high){
     console.log("correct!");
+    swal(
+      'Correct!',
+      'The temperature in ' + locList[currentLoc] + " is " + temp +  "\xB0F",
+      'success'
+    )
   }else{
     console.log("wrong!");
+    swal(
+      'Nope!',
+      'The temperature in ' + locList[currentLoc] + " is " + temp +  "\xB0F",
+      'error'
+    )
   }
 }
 
