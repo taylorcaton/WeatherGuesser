@@ -30,7 +30,7 @@
     <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav">
-      <h4>Guess the temperature </h4>
+      <h1 class="text-center">Guess the Temperature </h1>
       <ul class="nav nav-pills nav-stacked">
         <li>
           <button type="button" data-deg-low="90" data-deg-high="200" class="guess btn btn-block btn-lg btn-danger">&gt;90&deg F</button>
@@ -48,8 +48,10 @@
           <button type="button" data-deg-low="-100" data-deg-high="60" class="guess btn btn-block btn-lg btn-default">&lt;60&deg F</button
         ></li>
       </ul><br>
-      <div class="input-group">
-        <input class="btn btn-lg" id="start" type="button" value="Start">
+      <div style="width: 100%">
+        <button class="btn btn-lg btn-block" id="start">
+          <i class="fa fa-globe" aria-hidden="true"></i> Start / Reset
+        </button>
       </div>
       <div id="weatherDetails">
         <div class="icon"></div>
@@ -76,6 +78,9 @@
 
     <!-- Sweet Alert JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/9475f99c1a.js"></script>
     
     <!-- MY JS -->
     <script src="assets/js/logic.js"></script>
