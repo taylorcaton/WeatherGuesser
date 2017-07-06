@@ -1,4 +1,12 @@
-var locList = ["", "UNC Charlotte Center City Campus, NC", "Death Valley, CA", "Kathmandu, Nepal", "Disney World, FL", ]
+var locList = ["", 
+  "UNC Charlotte Center City Campus, NC", 
+  "Death Valley, CA", 
+  "Kathmandu, Nepal", 
+  "Disney World, FL",
+  "South Pole, Antarctica",
+  "Dallol, Ethiopia",
+  "Middelfart, Denmark",
+]
 var currentLoc = 0;
 var geocoder;
 var map;
@@ -63,13 +71,29 @@ function checkAnswer(low, high){
   }
 }
 
-$(document).on("click", "#nextCity", function(){
-
+function reset(){
+  currentLoc = 0;
   nextLoc();
   geocodeAddress(geocoder, map);
   getWeather(getLoc());
   updatePage();
+}
 
+$(document).on("click", "#start", function(){
+  reset();
+});
+
+$(document).on("click", ".swal2-buttonswrapper", function(){
+
+  if(currentLoc === locList.length-1){
+    reset();
+  }else{
+
+    nextLoc();
+    geocodeAddress(geocoder, map);
+    getWeather(getLoc());
+    updatePage();
+  }
 });
 
 $(document).on("click", ".guess", function(){
