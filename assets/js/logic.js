@@ -1,9 +1,9 @@
 var locList = ["", 
-  "UNC Charlotte Center City Campus, NC", 
+  "Charlotte, NC", 
   "Death Valley, CA", 
   "Kathmandu, Nepal", 
-  "Disney World, FL",
-  "South Pole, Antarctica",
+  "Orlando, FL",
+  "Oymyakon, Russia",
   "Dallol, Ethiopia",
   "Middelfart, Denmark",
 ]
