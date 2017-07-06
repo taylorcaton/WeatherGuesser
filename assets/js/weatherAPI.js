@@ -4,7 +4,7 @@ function getWeather(location){
 
     var APIKey = "2d215fa962ca281d86bc23a2aa2790bd";
 
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?" +
     "q="+location+"&units=imperial&appid=" + APIKey;
 
     $.ajax({
