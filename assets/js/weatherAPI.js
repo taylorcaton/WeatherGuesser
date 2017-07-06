@@ -1,12 +1,9 @@
-// Here we run our AJAX call to the OpenWeatherMap API
 var temp;
 
 function getWeather(location){
 
-    // This is our API key
-    var APIKey = "166a433c57516f51dfab1f7edaed8413";
+    var APIKey = "2d215fa962ca281d86bc23a2aa2790bd";
 
-    // Here we are building the URL we need to query the database
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
     "q="+location+"&units=imperial&appid=" + APIKey;
 
