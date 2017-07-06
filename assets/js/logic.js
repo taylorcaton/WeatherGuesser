@@ -50,7 +50,7 @@ function getLoc(){
 }
 
 function updatePage(){
-  $("#locName").html("Welcome to " + getLoc());
+  $("#locName").html("What is it currently like in " + getLoc() + "?");
 }
 
 function checkAnswer(low, high){
