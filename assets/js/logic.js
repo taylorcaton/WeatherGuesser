@@ -3,9 +3,20 @@ var locList = ["",
   "Death Valley, CA", 
   "Kathmandu, Nepal", 
   "Orlando, FL",
-  "Oymyakon, Russia",
+  "Giza, Egypt",
   "Dallol, Ethiopia",
   "Middelfart, Denmark",
+  "West Hollywood, CA",
+  "Beijing, China",
+  "Dubai, United Arab Emirates",
+  "Rio de Janeiro, Brazil",
+  "Mount Fuji, Japan",
+  "Easter Island",
+  "Niagara Falls",
+  "Blowing Rock, NC",
+  "Aspen, CO",
+  "Anchorage, AL",
+  "Honolulu, HI"
 ]
 var currentLoc = 0;
 var geocoder;
