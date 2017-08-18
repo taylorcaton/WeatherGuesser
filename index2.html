@@ -27,45 +27,12 @@
   </head>
   <body>
 
-  <div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <h1 class="text-center">Guess the Temperature </h1>
-      <ul class="nav nav-pills nav-stacked">
-        <li>
-          <button type="button" data-deg-low="90" data-deg-high="200" class="guess btn btn-block btn-lg btn-danger">&gt;90&deg F</button>
-        </li>
-        <li>
-          <button type="button" data-deg-low="80" data-deg-high="90" class="guess btn btn-block btn-lg btn-warning">80-90&deg F</button>
-        </li>
-        <li>
-          <button type="button" data-deg-low="70" data-deg-high="80" class="guess btn btn-block btn-lg btn-success">70-80&deg F</button>
-        </li>
-        <li>
-          <button type="button" data-deg-low="60" data-deg-high="70" class="guess btn btn-block btn-lg btn-primary">60-70&deg F</button>
-        </li>
-        <li>
-          <button type="button" data-deg-low="-100" data-deg-high="60" class="guess btn btn-block btn-lg btn-default">&lt;60&deg F</button
-        ></li>
-      </ul><br>
-      <div style="width: 100%">
-        <button class="btn btn-lg btn-block" id="start">
-          <i class="fa fa-globe" aria-hidden="true"></i> Start / Reset
-        </button>
-      </div>
+    
       <div id="weatherDetails">
         <div class="icon"></div>
         <div class="description"></div>
-        <div><p>Weather Provided by APIxu</p></div>
       </div>
-    </div>
-
-    <div class="col-sm-9">
-      <h2 id="locName">Press "Start"</h2>
-      <div id="map"></div>
-    </div>
-  </div>
-</div>
+    
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -81,14 +48,5 @@
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/9475f99c1a.js"></script>
     
-    <!-- MY JS -->
-    <script src="assets/js/logic.js"></script>
-    
-    <!-- Google API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh20X2Apvtd3thGAM_AIaJMs-rB_6cvms&callback=initMap">
-    </script>
-
-
-
   </body>
 </html>

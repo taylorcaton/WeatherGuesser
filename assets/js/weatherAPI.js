@@ -9,7 +9,7 @@ function getWeather(location){
 
     var queryURL = "https://api.apixu.com/v1/current.json?" +
     "key="+APIKey+"&q="+location;
-
+    
     $.ajax({
         url: queryURL,
         method: "GET"
