@@ -6,7 +6,7 @@ Instructions: Press Start and Guess the *current* weather at world-famous locati
 
 Link: https://taylorcaton.github.io/WeatherGuesser/
 
-![Preview Image](/assets/images/Capture3.png)
+![Preview Image](/assets/images/Capture3.PNG)
 
 Credits: 
 * [Google Maps API](https://developers.google.com/maps/)
